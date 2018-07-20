@@ -15,10 +15,6 @@ c
 ab
 """
 
-strs = []
-with open('input.txt') as f:
-    for line in f:
-        strs.append(line.rstrip())
-
-f = open('output.txt', 'w')
-f.write('\n'.join(strs[::-1]))
+with open('for_task_1/input.txt') as input_file, open('for_task_1/output.txt', 'w') as output_file:
+    strings = [line.rstrip() for line in input_file]
+    output_file.write('\n'.join(strings[::-1]))
